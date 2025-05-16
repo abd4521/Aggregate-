@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UET Aggregate Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <div class="container">
+            <h1>UET Aggregate Calculator</h1>
+            
+            <div class="input-section">
+                <div class="marks-section">
+                    <h2>Enter Your Marks</h2>
+                    <div class="input-group">
+                        <label for="metric">Metric Marks (out of 1100):</label>
+                        <input
+                            type="number"
+                            id="metric"
+                            placeholder="Enter metric marks"
+                            min="0"
+                            max="1100"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="firstYear">First Year Marks (out of 1100):</label>
+                        <input
+                            type="number"
+                            id="firstYear"
+                            placeholder="Enter first year marks"
+                            min="0"
+                            max="1100"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="ecat">ECAT Marks (out of 400):</label>
+                        <input
+                            type="number"
+                            id="ecat"
+                            placeholder="Enter ECAT marks"
+                            min="0"
+                            max="400"
+                        >
+                    </div>
+
+                    <button id="calculateAggregate" class="calculate-btn">Calculate Aggregate</button>
+                </div>
+
+                <div class="aggregate-section">
+                    <div class="input-group">
+                        <label for="aggregate">Your Aggregate:</label>
+                        <input
+                            type="number"
+                            id="aggregate"
+                            placeholder="Aggregate will be calculated"
+                            step="0.01"
+                            min="0"
+                            max="100"
+                            readonly
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="campus">Select Campus:</label>
+                        <select id="campus">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="category">Select Category:</label>
+                        <select id="category">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="eligible-programs">
+                    <h2>Eligible Programs</h2>
+                    <div id="eligiblePrograms" class="programs-grid">
+                        <!-- Programs will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="borderline-programs">
+                    <h2>Borderline Programs</h2>
+                    <div id="borderlinePrograms" class="programs-grid">
+                        <!-- Programs will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
